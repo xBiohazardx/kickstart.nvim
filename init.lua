@@ -7,7 +7,14 @@ vim.g.have_nerd_font = false
 -- See `:help vim.opt`
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
+--
+--  Automatically add closing paranthesis
+vim.keymap.set('i', '{', '{}<Esc>ha')
+vim.keymap.set('i', '[', '[]<Esc>ha')
+vim.keymap.set('i', '"', '""<Esc>ha')
+vim.keymap.set('i', "'", "''<Esc>ha")
 
+--
 -- Make line numbers default
 vim.opt.number = true
 -- You can also add relative line numbers, to help with jumping.
@@ -519,7 +526,11 @@ require('lazy').setup({
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
-        clangd = {},
+        clangd = {
+          setup = function()
+            print 'Hello Philipp'
+          end,
+        },
         dcm = {},
         -- gopls = {},
         -- pyright = {},
