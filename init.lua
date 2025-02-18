@@ -530,9 +530,7 @@ require('lazy').setup({
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
         clangd = {
-          setup = function()
-            print 'Hello Philipp'
-          end,
+          cmd = { '/home/philipp/.espressif/tools/esp-clang/16.0.1-fe4f10a809/esp-clang/bin/clangd' },
         },
         dcm = {},
         -- gopls = {},
