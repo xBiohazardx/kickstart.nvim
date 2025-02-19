@@ -408,6 +408,7 @@ require('lazy').setup({
         clangd = {
           cmd = { '/home/philipp/.espressif/tools/esp-clang/16.0.1-fe4f10a809/esp-clang/bin/clangd' },
         },
+        rust_analyzer = {},
         dcm = {},
         -- gopls = {},
         -- pyright = {},
