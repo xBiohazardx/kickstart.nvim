@@ -408,6 +408,16 @@ require('lazy').setup({
         clangd = {
           cmd = { '/home/philipp/.espressif/tools/esp-clang/16.0.1-fe4f10a809/esp-clang/bin/clangd' },
         },
+        ts_ls = {
+          root_dir = require('lspconfig').util.root_pattern { 'package.json', 'tsconfig.json' },
+          single_file_support = false,
+          settings = {},
+        },
+        denols = {
+          root_dir = require('lspconfig').util.root_pattern { 'deno.json', 'deno.jsonc' },
+          single_file_support = false,
+          settings = {},
+        },
         rust_analyzer = {},
         dcm = {},
         -- gopls = {},
